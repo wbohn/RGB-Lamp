@@ -10,6 +10,8 @@
 #define __CONTROLLER_H__
 
 #define NUM_LEDS 30 // LED strip
+#define NUM_BULBS 5 //
+#define LEDS_PER_BULB 6
 #define DATA_PIN 6  //
 #define CLOCK_PIN 7 //
 

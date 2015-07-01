@@ -1,6 +1,5 @@
 #include <FastLED.h>
 #include "Controller.h"
-#include "Lamp.h"
 #include "Message.h"
 #include "Color.h"
 
@@ -25,8 +24,6 @@ CRGB leds[NUM_LEDS]; // leds to be displayed
 int sequence[100];
 int gameIndex = 0;
 
-Lamp lamp;
-
 // default constructor
 Controller::Controller() {
 	FastLED.addLeds<LPD8806, DATA_PIN, CLOCK_PIN, GRB>(leds, NUM_LEDS);
@@ -36,7 +33,6 @@ Controller::Controller() {
 // default destructor
 Controller::~Controller() {
 } //~Controller
-
 
 CRGB argbToCrgb(long color) {
 	/* converts ARGB long to CRGB struct */
